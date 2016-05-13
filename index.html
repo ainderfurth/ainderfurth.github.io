@@ -34,12 +34,17 @@
       min:0,
       max:100,
       step:1,
-      value:65
+      value: $('#ex1').slider('getValue') * 0.5
     });
     $('#ex1').on('change', function() {
       var newValue
       newValue = 0.5 * $('#ex1').slider('getValue')
       $('#ex2').slider('setValue', newValue)
+    });
+    $('#ex2').on('change', function() {
+      var newValue
+      newValue = 2 * $('#ex2').slider('getValue')
+      $('#ex1').slider('setValue', newValue)
     });
     </script>
   </div>
