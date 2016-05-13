@@ -36,6 +36,11 @@
       step:1,
       value:65
     });
+    $('#ex1').on('change', function() {
+      var newValue
+      newValue = 0.5 * $('#ex1').slider('getValue')
+      $('#ex2').slider('setValue', newValue)
+    });
     </script>
   </div>
 
