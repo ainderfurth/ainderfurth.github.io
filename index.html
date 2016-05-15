@@ -30,51 +30,61 @@
 
 <body>
 
-
   <div class="container">
-    <h1>Hello World</h1>
-    <p>Someday this becomes a demonstration of a campus mixer interface using Bootstrap and GitHub Pages.</p>
-    <input id="ex1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-    <input id="ex2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
-    <input id="toggle-one" checked type="checkbox">
-    <script>
-    var flag;
-    flag = true;
-    $('#ex1').slider({
-      reversed:true,
-      min:0,
-      max:100,
-      step:1,
-      value:75
-    });
-    $('#ex2').slider({
-      reversed:true,
-      min:0,
-      max:100,
-      step:1,
-      value: $('#ex1').slider('getValue') * 0.5
-    });
-    $('#ex1').on('change', function() {
-      if (flag) {
-        var newValue
-        newValue = 0.5 * $('#ex1').slider('getValue')
-        $('#ex2').slider('setValue', newValue)
-      };
-    });
-    $('#ex2').on('change', function() {
-      if (flag) {
-        var newValue
-        newValue = 2 * $('#ex2').slider('getValue')
-        $('#ex1').slider('setValue', newValue)
-      };
-    });
-    $('#toggle-one').bootstrapToggle();
-    $('#toggle-one').change(function() {
-      flag = !flag
-    });
-    </script>
+    <div class="jumbotron">
+      <h1>Hello World</h1>
+      <p>Someday this becomes a demonstration of a campus mixer interface using Bootstrap and GitHub Pages.</p>
+    </div>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <input id="ex1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="ex2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+      </div>
+      <div class="col-xs-6">
+        <input id="toggle-one" checked type="checkbox">
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var flag;
+  flag = true;
+  $('#ex1').slider({
+    reversed:true,
+    min:0,
+    max:100,
+    step:1,
+    value:75
+  });
+  $('#ex2').slider({
+    reversed:true,
+    min:0,
+    max:100,
+    step:1,
+    value: $('#ex1').slider('getValue') * 0.5
+  });
+  $('#ex1').on('change', function() {
+    if (flag) {
+      var newValue
+      newValue = 0.5 * $('#ex1').slider('getValue')
+      $('#ex2').slider('setValue', newValue)
+    };
+  });
+  $('#ex2').on('change', function() {
+    if (flag) {
+      var newValue
+      newValue = 2 * $('#ex2').slider('getValue')
+      $('#ex1').slider('setValue', newValue)
+    };
+  });
+  $('#toggle-one').bootstrapToggle();
+  $('#toggle-one').change(function() {
+    flag = !flag
+  });
+  </script>
 
 </body>
 </html>
