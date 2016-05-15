@@ -38,15 +38,14 @@
   </div>
 
   <div class="container">
-    <div class="row">
-      <div class="col-xs-6">
-        <input id="ex1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-        <input id="ex2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
-      </div>
-      <div class="col-xs-6">
-        <input id="toggle-one" checked type="checkbox">
-      </div>
-    </div>
+    <input id="ex1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
+    <input id="ex2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+  </div>
+  <div class="container">
+    <p></p>
+    <input id="toggle-one" checked type="checkbox"> <p></p>
+    <input id="toggle-two" checked type="checkbox"> <p></p>
+    <input id="toggle-three" checked type="checkbox"> <p></p>
   </div>
 
   <script>
@@ -80,7 +79,21 @@
       $('#ex1').slider('setValue', newValue)
     };
   });
-  $('#toggle-one').bootstrapToggle();
+  $('#toggle-one').bootstrapToggle({
+    width: 250,
+    on: "Hydro-thermal carbonization on",
+    off: "Hydro-thermal carbonization"
+  });
+  $('#toggle-two').bootstrapToggle({
+    width: 250,
+    on: "Aquifer thermal energy storage on",
+    off: "Aquifer thermal energy storage"
+  });
+  $('#toggle-three').bootstrapToggle({
+    width: 250,
+    on: "Solar-thermal plant on",
+    off: "Solar-thermal plant"
+  });
   $('#toggle-one').change(function() {
     flag = !flag
   });
