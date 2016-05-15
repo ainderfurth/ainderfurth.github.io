@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/css/bootstrap-slider.min.css">
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/bootstrap-slider.min.js"></script>
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   <style type='text/css'>
     #ex1Slider .slider-track-high {
       background: rgba(220,20,60,0.5);
@@ -34,6 +36,7 @@
     <p>Someday this becomes a demonstration of a campus mixer interface using Bootstrap and GitHub Pages.</p>
     <input id="ex1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
     <input id="ex2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+    <input id="toggle-one" checked type="checkbox">
     <script>
     $('#ex1').slider({
       reversed:true,
@@ -58,6 +61,9 @@
       var newValue
       newValue = 2 * $('#ex2').slider('getValue')
       $('#ex1').slider('setValue', newValue)
+    });
+    $(function() {
+      $('#toggle-one').bootstrapToggle();
     });
     </script>
   </div>
