@@ -23,7 +23,7 @@
       background: rgba(50,205,50,0.5);
     }
     #ex2Slider .slider-handle {
-      background: rgba(50, 205, 50, 1);;
+      background: rgba(50, 205, 50, 1);
     }
   </style>
 </head>
@@ -38,6 +38,8 @@
     <input id="ex2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
     <input id="toggle-one" checked type="checkbox">
     <script>
+    var flag;
+    flag = true;
     $('#ex1').slider({
       reversed:true,
       min:0,
@@ -53,17 +55,22 @@
       value: $('#ex1').slider('getValue') * 0.5
     });
     $('#ex1').on('change', function() {
-      var newValue
-      newValue = 0.5 * $('#ex1').slider('getValue')
-      $('#ex2').slider('setValue', newValue)
+      if (flag) {
+        var newValue
+        newValue = 0.5 * $('#ex1').slider('getValue')
+        $('#ex2').slider('setValue', newValue)
+      };
     });
     $('#ex2').on('change', function() {
-      var newValue
-      newValue = 2 * $('#ex2').slider('getValue')
-      $('#ex1').slider('setValue', newValue)
+      if (flag) {
+        var newValue
+        newValue = 2 * $('#ex2').slider('getValue')
+        $('#ex1').slider('setValue', newValue)
+      };
     });
-    $(function() {
-      $('#toggle-one').bootstrapToggle();
+    $('#toggle-one').bootstrapToggle();
+    $('#toggle-one').change(function() {
+      flag = !flag
     });
     </script>
   </div>
