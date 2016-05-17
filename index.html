@@ -47,6 +47,7 @@
       </div>
       <div class="col-sm-9">
         <h3>Plants</h3>
+        <button type="button" id="button-one" class="btn btn-warning">Info</button> <p></p>
         <input id="toggle-one" checked type="checkbox" data-onstyle="success" data-width="250" data-on="Hydro-thermal carbonization on" data-off="Hydro-thermal carbonization"> <p></p>
         <input id="toggle-two" checked type="checkbox" data-onstyle="success" data-width="250" data-on="Aquifer thermal energy storage on" data-off="Aquifer thermal energy storage"> <p></p>
         <input id="toggle-three" checked type="checkbox" data-onstyle="success" data-width="250" data-on="Solar-thermal plant on" data-off="Solar-thermal plant"> <p></p>
@@ -115,9 +116,10 @@
 
 
   <script>
-  var flag;
-  var TEval;
-  flag = true;
+  var flag = true;
+  $('#button-one').on('click', function() {
+    $('#exB1').slider("refresh")
+  });
   $('#toggle-one')
     .bootstrapToggle()
     .change(function() {
@@ -145,9 +147,7 @@
         $('#exA1').slider('setValue', newValue)
       }
     });
-  $('#exB1').slider({
-    value: TEval,
-  });
+  $('#exB1').slider();
   $('#exB2').slider();
   $('#exC1').slider();
   $('#exC2').slider();
