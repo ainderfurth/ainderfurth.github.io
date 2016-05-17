@@ -37,21 +37,78 @@
     </div>
   </div>
 
-  <div class="text-center">
-    <input id="ex1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-    <input id="ex2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+  <div class="container">
+    <div class="row">
+      <h2>Meta level</h2>
+      <div class="col-sm-3">
+        <h3>Top level settings</h3>
+        <input id="exA1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exA2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+      </div>
+      <div class="col-sm-9">
+        <h3>Plants</h3>
+        <input id="toggle-one" checked type="checkbox"> <p></p>
+        <input id="toggle-two" checked type="checkbox"> <p></p>
+        <input id="toggle-three" checked type="checkbox"> <p></p>
+      </div>
+      <p></p>
+    </div>
+    <div class="row">
+      <h2>Campus level building settings</h2>
+      <div class="col-sm-3">
+        <h3>Thermal envelope</h3>
+        <input id="exB1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exB2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+      </div>
+      <div class="col-sm-3">
+        <h3>Heating equipment</h3>
+        <input id="exC1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exC2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+      </div>
+      <div class="col-sm-3">
+        <h3>Cooling equipment</h3>
+        <input id="exD1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exD2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+      </div>
+      <div class="col-sm-3">
+        <h3>Electrical devices</h3>
+        <input id="exE1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exE2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+      </div>
+    </div>
+    <div class="row">
+      <h2>Building level settings</h2>
+      <div class="col-sm-3">
+        <h4>Building A</h4>
+        <p>Thermal hull:<input id="ex13" data-slider-tooltip="hide"/></p>
+        <p>Heating system:<input id="ex14" data-slider-tooltip="hide"/></p>
+        <p>Cooling system:<input id="ex15" data-slider-tooltip="hide"/></p>
+        <p>Electrical devices:<input id="ex16" data-slider-tooltip="hide"/></p>
+      </div>
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-3">
+      </div>
+    </div>
   </div>
-  <div class="text-center">
-    <p></p>
-    <input id="toggle-one" checked type="checkbox"> <p></p>
-    <input id="toggle-two" checked type="checkbox"> <p></p>
-    <input id="toggle-three" checked type="checkbox"> <p></p>
-  </div>
+
 
   <script>
   var flag;
   flag = true;
-  $('#ex1')
+  $('#exA1')
     .slider({
       reversed:true,
       min:0,
@@ -62,23 +119,23 @@
     .on('change', function() {
       if (flag) {
         var newValue
-        newValue = 0.5 * $('#ex1').slider('getValue')
-        $('#ex2').slider('setValue', newValue)
+        newValue = 0.5 * $('#exA1').slider('getValue')
+        $('#exA2').slider('setValue', newValue)
       }
     });
-  $('#ex2')
+  $('#exA2')
     .slider({
       reversed:true,
       min:0,
       max:100,
       step:1,
-      value: $('#ex1').slider('getValue') * 0.5
+      value: $('#exA1').slider('getValue') * 0.5
     })
     .on('change', function() {
       if (flag) {
         var newValue
-        newValue = 2 * $('#ex2').slider('getValue')
-        $('#ex1').slider('setValue', newValue)
+        newValue = 2 * $('#exA2').slider('getValue')
+        $('#exA1').slider('setValue', newValue)
       }
     });
   $('#toggle-one')
@@ -103,6 +160,82 @@
     on: "Solar-thermal plant on",
     off: "Solar-thermal plant"
   });
+  $('#exB1').slider({
+      reversed:true,
+      min:0,
+      max:100,
+      step:1,
+      value:75
+  });
+  $('#exB2').slider({
+      reversed:true,
+      min:0,
+      max:100,
+      step:1,
+      value:55
+    });
+    $('#exC1').slider({
+        reversed:true,
+        min:0,
+        max:100,
+        step:1,
+        value:75
+    });
+    $('#exC2').slider({
+        reversed:true,
+        min:0,
+        max:100,
+        step:1,
+        value:55
+      });
+    $('#exD1').slider({
+        reversed:true,
+        min:0,
+        max:100,
+        step:1,
+        value:75
+    });
+    $('#exD2').slider({
+        reversed:true,
+        min:0,
+        max:100,
+        step:1,
+        value:55
+      });
+    $('#exE1').slider({
+        reversed:true,
+        min:0,
+        max:100,
+        step:1,
+        value:75
+    });
+    $('#exE2').slider({
+        reversed:true,
+        min:0,
+        max:100,
+        step:1,
+        value:55
+      });
+    $("#ex13").slider({
+      ticks: [0, 1, 2],
+      ticks_labels: ['status quo', 'better', 'best'],
+      value: 0
+    });
+    $("#ex14").slider({
+      ticks: [0, 1, 2],
+      ticks_labels: ['status quo', 'better', 'best'],
+      value: 0
+    });
+    $("#ex15").slider({
+      ticks: [0, 1, 2],
+      ticks_labels: ['status quo', 'better', 'best'],
+      value: 0
+    });
+    $("#ex16").slider({
+      ticks: [0, 1, 2],
+      ticks_labels: ['status quo', 'better', 'best'],
+      value: 0
+    });
   </script>
 
 </body>
