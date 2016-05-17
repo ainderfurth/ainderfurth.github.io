@@ -14,16 +14,16 @@
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   <style type='text/css'>
     #ex1Slider .slider-track-high {
-      background: rgba(220,20,60,0.5);
+      background: rgba(217,83,79,0.5);
     }
     #ex1Slider .slider-handle {
-      background: rgba(220,20,60, 1);;
+      background: rgba(217,83,79, 1);
     }
     #ex2Slider .slider-track-high {
-      background: rgba(50,205,50,0.5);
+      background: rgba(92,184,92,0.5);
     }
     #ex2Slider .slider-handle {
-      background: rgba(50, 205, 50, 1);
+      background: rgba(92, 184, 92, 1);
     }
   </style>
 </head>
@@ -51,51 +51,57 @@
   <script>
   var flag;
   flag = true;
-  $('#ex1').slider({
-    reversed:true,
-    min:0,
-    max:100,
-    step:1,
-    value:75
-  });
-  $('#ex2').slider({
-    reversed:true,
-    min:0,
-    max:100,
-    step:1,
-    value: $('#ex1').slider('getValue') * 0.5
-  });
-  $('#ex1').on('change', function() {
-    if (flag) {
-      var newValue
-      newValue = 0.5 * $('#ex1').slider('getValue')
-      $('#ex2').slider('setValue', newValue)
-    };
-  });
-  $('#ex2').on('change', function() {
-    if (flag) {
-      var newValue
-      newValue = 2 * $('#ex2').slider('getValue')
-      $('#ex1').slider('setValue', newValue)
-    };
-  });
-  $('#toggle-one').bootstrapToggle({
-    width: 250,
-    on: "Hydro-thermal carbonization on",
-    off: "Hydro-thermal carbonization"
-  });
+  $('#ex1')
+    .slider({
+      reversed:true,
+      min:0,
+      max:100,
+      step:1,
+      value:75
+    })
+    .on('change', function() {
+      if (flag) {
+        var newValue
+        newValue = 0.5 * $('#ex1').slider('getValue')
+        $('#ex2').slider('setValue', newValue)
+      }
+    });
+  $('#ex2')
+    .slider({
+      reversed:true,
+      min:0,
+      max:100,
+      step:1,
+      value: $('#ex1').slider('getValue') * 0.5
+    })
+    .on('change', function() {
+      if (flag) {
+        var newValue
+        newValue = 2 * $('#ex2').slider('getValue')
+        $('#ex1').slider('setValue', newValue)
+      }
+    });
+  $('#toggle-one')
+    .bootstrapToggle({
+      onstyle: "success",
+      width: 250,
+      on: "Hydro-thermal carbonization on",
+      off: "Hydro-thermal carbonization"
+    })
+    .change(function() {
+      flag = !flag
+    });
   $('#toggle-two').bootstrapToggle({
+    onstyle: "success",
     width: 250,
     on: "Aquifer thermal energy storage on",
     off: "Aquifer thermal energy storage"
   });
   $('#toggle-three').bootstrapToggle({
+    onstyle: "success",
     width: 250,
     on: "Solar-thermal plant on",
     off: "Solar-thermal plant"
-  });
-  $('#toggle-one').change(function() {
-    flag = !flag
   });
   </script>
 
