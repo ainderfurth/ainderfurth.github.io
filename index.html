@@ -42,14 +42,14 @@
       <h2>Meta level</h2>
       <div class="col-sm-3">
         <h3>Top level settings</h3>
-        <input id="exA1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-        <input id="exA2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exA1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
+        <input id="exA2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1"/>
       </div>
       <div class="col-sm-9">
         <h3>Plants</h3>
-        <input id="toggle-one" checked type="checkbox"> <p></p>
-        <input id="toggle-two" checked type="checkbox"> <p></p>
-        <input id="toggle-three" checked type="checkbox"> <p></p>
+        <input id="toggle-one" checked type="checkbox" data-onstyle="success" data-width="250" data-on="Hydro-thermal carbonization on" data-off="Hydro-thermal carbonization"> <p></p>
+        <input id="toggle-two" checked type="checkbox" data-onstyle="success" data-width="250" data-on="Aquifer thermal energy storage on" data-off="Aquifer thermal energy storage"> <p></p>
+        <input id="toggle-three" checked type="checkbox" data-onstyle="success" data-width="250" data-on="Solar-thermal plant on" data-off="Solar-thermal plant"> <p></p>
       </div>
       <p></p>
     </div>
@@ -57,40 +57,40 @@
       <h2>Campus level building settings</h2>
       <div class="col-sm-3">
         <h3>Thermal envelope</h3>
-        <input id="exB1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-        <input id="exB2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exB1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
+        <input id="exB2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
       </div>
       <div class="col-sm-3">
         <h3>Heating equipment</h3>
-        <input id="exC1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-        <input id="exC2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exC1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
+        <input id="exC2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
       </div>
       <div class="col-sm-3">
         <h3>Cooling equipment</h3>
-        <input id="exD1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-        <input id="exD2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exD1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
+        <input id="exD2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
       </div>
       <div class="col-sm-3">
         <h3>Electrical devices</h3>
-        <input id="exE1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical"/>
-        <input id="exE2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical"/>
+        <input id="exE1" data-slider-id='ex1Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
+        <input id="exE2" data-slider-id='ex2Slider' type="text"  data-slider-orientation="vertical" data-slider-reversed="true" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
       </div>
     </div>
     <div class="row">
       <h2>Building level settings</h2>
       <div class="col-sm-4">
         <h4>Building A</h4>
-        <p>Thermal hull:</p><p><input id="ex13" data-slider-tooltip="hide"/></p>
-        <p>Heating system:</p><p><input id="ex14" data-slider-tooltip="hide"/></p>
-        <p>Cooling system:</p><p><input id="ex15" data-slider-tooltip="hide"/></p>
-        <p>Electrical devices:</p><p><input id="ex16" data-slider-tooltip="hide"/></p>
+        <p>Thermal hull:</p><p><input id="ex13" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="1"/></p>
+        <p>Heating system:</p><p><input id="ex14" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="2"/></p>
+        <p>Cooling system:</p><p><input id="ex15" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="0"/></p>
+        <p>Electrical devices:</p><p><input id="ex16" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="1"/></p>
       </div>
       <div class="col-sm-4">
         <h4>Building B</h4>
-        <p>Thermal hull:</p><p><input id="ex17" data-slider-tooltip="hide"/></p>
-        <p>Heating system:</p><p><input id="ex18" data-slider-tooltip="hide"/></p>
-        <p>Cooling system:</p><p><input id="ex19" data-slider-tooltip="hide"/></p>
-        <p>Electrical devices:</p><p><input id="ex20" data-slider-tooltip="hide"/></p>
+        <p>Thermal hull:</p><p><input id="ex17" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="2"/></p>
+        <p>Heating system:</p><p><input id="ex18" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="0"/></p>
+        <p>Cooling system:</p><p><input id="ex19" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="1"/></p>
+        <p>Electrical devices:</p><p><input id="ex20" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="2"/></p>
       </div>
       <div class="col-sm-4">
         <h4>Building ...</h4>
@@ -105,10 +105,10 @@
       </div>
       <div class="col-sm-4">
         <h4>Building Z</h4>
-        <p>Thermal hull:</p><p><input id="ex21" data-slider-tooltip="hide"/></p>
-        <p>Heating system:</p><p><input id="ex22" data-slider-tooltip="hide"/></p>
-        <p>Cooling system:</p><p><input id="ex23" data-slider-tooltip="hide"/></p>
-        <p>Electrical devices:</p><p><input id="ex24" data-slider-tooltip="hide"/></p>
+        <p>Thermal hull:</p><p><input id="ex21" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="0"/></p>
+        <p>Heating system:</p><p><input id="ex22" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="1"/></p>
+        <p>Cooling system:</p><p><input id="ex23" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="2"/></p>
+        <p>Electrical devices:</p><p><input id="ex24" data-slider-tooltip="hide" data-slider-ticks="[0, 1, 2]" data-slider-tickslabels="['status quo', 'better', 'even better']" data-slider-value="0"/></p>
       </div>
     </div>
   </div>
@@ -118,13 +118,7 @@
   var flag;
   flag = true;
   $('#exA1')
-    .slider({
-      reversed:true,
-      min:0,
-      max:100,
-      step:1,
-      value:75
-    })
+    .slider()
     .on('change', function() {
       if (flag) {
         var newValue
@@ -134,10 +128,6 @@
     });
   $('#exA2')
     .slider({
-      reversed:true,
-      min:0,
-      max:100,
-      step:1,
       value: $('#exA1').slider('getValue') * 0.5
     })
     .on('change', function() {
@@ -148,144 +138,32 @@
       }
     });
   $('#toggle-one')
-    .bootstrapToggle({
-      onstyle: "success",
-      width: 250,
-      on: "Hydro-thermal carbonization on",
-      off: "Hydro-thermal carbonization"
-    })
+    .bootstrapToggle()
     .change(function() {
       flag = !flag
     });
-  $('#toggle-two').bootstrapToggle({
-    onstyle: "success",
-    width: 250,
-    on: "Aquifer thermal energy storage on",
-    off: "Aquifer thermal energy storage"
-  });
-  $('#toggle-three').bootstrapToggle({
-    onstyle: "success",
-    width: 250,
-    on: "Solar-thermal plant on",
-    off: "Solar-thermal plant"
-  });
-  $('#exB1').slider({
-      reversed:true,
-      min:0,
-      max:100,
-      step:1,
-      value:75
-  });
-  $('#exB2').slider({
-      reversed:true,
-      min:0,
-      max:100,
-      step:1,
-      value:55
-    });
-    $('#exC1').slider({
-        reversed:true,
-        min:0,
-        max:100,
-        step:1,
-        value:75
-    });
-    $('#exC2').slider({
-        reversed:true,
-        min:0,
-        max:100,
-        step:1,
-        value:55
-      });
-    $('#exD1').slider({
-        reversed:true,
-        min:0,
-        max:100,
-        step:1,
-        value:75
-    });
-    $('#exD2').slider({
-        reversed:true,
-        min:0,
-        max:100,
-        step:1,
-        value:55
-      });
-    $('#exE1').slider({
-        reversed:true,
-        min:0,
-        max:100,
-        step:1,
-        value:75
-    });
-    $('#exE2').slider({
-        reversed:true,
-        min:0,
-        max:100,
-        step:1,
-        value:55
-      });
-    $("#ex13").slider({
-      width: "100px",
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 1
-    });
-    $("#ex14").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 2
-    });
-    $("#ex15").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 1
-    });
-    $("#ex16").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 0
-    });
-    $("#ex17").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 1
-    });
-    $("#ex18").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 2
-    });
-    $("#ex19").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 1
-    });
-    $("#ex20").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 0
-    });
-    $("#ex21").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 1
-    });
-    $("#ex22").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 2
-    });
-    $("#ex23").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 1
-    });
-    $("#ex24").slider({
-      ticks: [0, 1, 2],
-      ticks_labels: ['status quo', 'better', 'even better'],
-      value: 0
-    });
+  $('#toggle-two').bootstrapToggle();
+  $('#toggle-three').bootstrapToggle();
+  $('#exB1').slider();
+  $('#exB2').slider();
+  $('#exC1').slider();
+  $('#exC2').slider();
+  $('#exD1').slider();
+  $('#exD2').slider();
+  $('#exE1').slider();
+  $('#exE2').slider();
+  $("#ex13").slider();
+  $("#ex14").slider();
+  $("#ex15").slider();
+  $("#ex16").slider();
+  $("#ex17").slider();
+  $("#ex18").slider();
+  $("#ex19").slider();
+  $("#ex20").slider();
+  $("#ex21").slider();
+  $("#ex22").slider();
+  $("#ex23").slider();
+  $("#ex24").slider();
   </script>
 
 </body>
